@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  php:
+    image: php-built
+    volumes:
+      - ${WEB_VOLUME}:/work
+
+  web:
+    image: nginx-built
+    ports:
+      - 80:80
+    volumes:
+      - ${WEB_VOLUME}:/work
+    working_dir: /work
+
+  db:
+    image: mysql8-built
+    volumes:
+      - db-store:/var/lib/mysql
+    ports:
+      - 3306:3306
+
+volumes:
+  db-store:
