@@ -1,2 +1,26 @@
 /* ここから処理を記述 */
+.header {
+    background-color: beige;
+    height: 100px;
+}
 
+.header img {
+    display: inline-block;
+    height: 90%;
+}
+
+.header h1 {
+    display: inline-block;
+}
+
+.header ul {
+    display: inline-block;
+    list-style: none;
+    margin-left: 20%;
+}
+
+.header li {
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+}

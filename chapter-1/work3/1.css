@@ -1,2 +1,13 @@
 /* ここから処理を記述 */
+.header {
+    background-color: red;
+}
+
+.main {
+    background-color: blue;
+}
+
+.footer {
+    background-color: yellow;
+}
 
