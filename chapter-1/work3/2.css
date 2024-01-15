@@ -1,17 +1,26 @@
 /* ここから処理を記述 */
 .header {
-    display:inline-block;
+    display:flex;
+    align-items: flex-end;
 }
 
 h1 {
+    display:inline-block;
     width: 500px;
     height: 42px;
     background-color: red;
 }
 
+.ul {
+    align-items: center;
+    margin-top: 0;
+}
+
 li {
+    display:inline-block;
     width: 200px;
-    height: 200px;
+    text-align: center;
+    height: 20px;
     background-color: red;
     list-style: none;
 }
