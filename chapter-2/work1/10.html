@@ -30,8 +30,38 @@
 
       const money = ([1, 5, 10, 50, 100, 500, 1000, 5000, 10000, Math.floor(Math.random() * 30000)])[Math.floor(Math.random() * 10)];
       // ここより上の行は編集禁止です。
-
-
+      switch (money) {
+       case (money==1):
+        console.log('これは1円玉です');
+        break;
+       case (money==5):
+        console.log('これは5円玉です');
+        break;
+       case (money==10):
+        console.log('これは10円玉です');
+        break;
+       case (money==50):
+        console.log('これは50円玉です');
+        break;
+       case (money==100):
+        console.log('これは100円玉です');
+        break;
+       case (money==500):
+        console.log('これは500円玉です');
+        break;
+       case (money==1000):
+        console.log('これは1000円札です');
+        break;
+       case (money==5000):
+        console.log('これは5000円札です');
+        break;
+       case (money==10000):
+        console.log('これは10000円札です');
+        break;
+       default:
+        console.log('これは'+money+'円です');
+        break;
+      }
 
 
     </script>

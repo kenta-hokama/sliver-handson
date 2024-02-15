@@ -1,17 +1,17 @@
 let hoge = '変数だよ';
 console.log('これは ' + hoge);
 
-// hoge = 2023;
-// console.log('これは ' + hoge);
+hoge = 2023;
+console.log('これは ' + hoge);
 
-// hoge = hoge + 1;
-// console.log('これは ' + hoge);
+hoge = hoge + 1;
+console.log('これは ' + hoge);
 
-// hoge += 1;
-// console.log('これは ' + hoge);
+hoge += 1;
+console.log('これは ' + hoge);
 
-// hoge++;
-// console.log('これは ' + hoge);
+hoge++;
+console.log('これは ' + hoge);
 
 /**
 【解説】

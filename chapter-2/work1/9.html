@@ -21,7 +21,13 @@
       const mathPoint = Math.floor(Math.random() * 20) + 80;
       const englishPoint = Math.floor(Math.random() * 20) + 80;
       // ここより上の行は編集禁止です。
+      if (mathPoint>=90 && englishPoint>=90) {
+        console.log('A高校に合格!');
+      }
 
+      if (mathPoint>=90 || englishPoint>=90) {
+        console.log('B高校に合格!');
+      }
 
 
 

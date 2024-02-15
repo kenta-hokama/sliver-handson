@@ -29,10 +29,39 @@
       console.log(`foo=${foo}, bar=${bar}`)
       let isEqual;
       // ここより上の行は編集禁止です。
+      isEqual = (bar=='ハロー');
+      if(isEqual) {
+        console.log(bar);
+      }
+      
+      isEqual = true;
+      if(isEqual) {
+        console.log(bar);
+      }
+      
+      if(bar=='ニーハオ') {
+        console.log('barの値は「ニーハオ」');
+      }
 
+      if(bar!='こんにちは') {
+        console.log('barの読み方は「こんにちは」ではない。');
+      }
 
+      if(foo<8) {
+        console.log('fooは8より小さい');
+      }
 
+      if(foo<=9) {
+        console.log('fooは9以下');
+      }
 
+      if(foo>10) {
+        console.log('fooは10以上');
+      }
+
+      if(foo>=11) {
+        console.log('fooは11より大きい');
+      }
     </script>
   </body>
 </html>
