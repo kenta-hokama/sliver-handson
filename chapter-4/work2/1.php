@@ -44,11 +44,23 @@
     ...
 */
 
-
-function leapYear($i, $year)
-{
     // ここに処理を記載
-}
+    function leapYear($year) {
+        if ($year % 4 == 0) {
+            if ($year % 100 == 0) {
+                if ($year % 400 == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            } else {
+                return true;
+            }
+        } else {
+            return false;
+        }
+    
+    }
 
 ?>
 <!DOCTYPE html>
@@ -77,8 +89,20 @@ function leapYear($i, $year)
     <div class="m-5">
         <h1>うるう年を判定していきます！</h1>
         <!-- ここから表示する処理を記載 -->
+    <?php
 
+    for ($year = 1900; $year <= 2024; $year++){
+        if (leapYear($year)) {
+            echo $year . '年はうるう年です。';
+            echo '<br>';
+        } else {
+            echo $year . '年はうるう年ではありません。';
+            echo '<br>';
+        }
+        }
+    ?>
 
+        
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

@@ -33,17 +33,41 @@
         */
 
         // 1. 文字列 'sliver' の文字数をPHPの関数を用いて出力して下さい。
+        echo strlen ('sliver');
+        echo '<br>';
 
 
         // 2. 1~10までのランダムの数値をPHPの関数を用いて出力して下さい。
+        echo rand (1,10);
+        echo '<br>';
 
 
         // 3.長方形の面積を求める関数を自作し、関数の戻り値を出力して下さい。
+        function rectangleAreaCalculator() {
+            $height1 = 5;
+            $width1 = 7;
+            return $height1 * $width1;
+        }
+
+        $answer = rectangleAreaCalculator();
+        echo ($answer);
+        echo '<br>';
 
 
         // 4.円の面積を求める関数を自作し、関数の戻り値を出力して下さい。
         // （円周率は3で計算）
         // （縦を$height、横を$widthで定義）
+        function areaOfACircle() {
+            $width = 10;
+            $r = $width / 2;
+            $s = $r * $r * 3;
+            return $s;
+        }
+
+        $s = areaOfACircle();
+        echo($s);
+        echo '<br>';
+
 
 
     ?>

@@ -16,6 +16,24 @@
 function changeBreakDown($money, $product)
 {
   // ここに処理を記載
+  $money = 10000;
+  $product = 2980;
+
+$change = $money - $product;
+$yen = array (5000,1000,500,100,50,10,5,1);{
+
+foreach($yen as $i => $j){
+    $maisu[$i] = floor($change / $j);
+    $change -= $j * $maisu[$i];
+    if($j > 500){
+        echo $j . "円札×" . $maisu[$i] . "枚" . "、";
+        echo '<br>';
+    }elseif($j < 10000){
+        echo $j . "円玉×" . $maisu[$i] . "枚" . "、";
+        echo '<br>';
+    }
+}
+}
 }
 
 ?>
@@ -45,6 +63,16 @@ function changeBreakDown($money, $product)
     <div class="m-5">
         <h1>お会計です！</h1>
         <!-- ここから表示する処理を記載 -->
+        <?php
+        $money = 10000;
+        $product = 2980;
+        $change = $money - $product;
+        $yen = array (5000,1000,500,100,50,10,5,1);
+
+        echo changeBreakDown($money, $product);
+        echo '<br>';
+        
+        ?>
 
 
     </div>

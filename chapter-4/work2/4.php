@@ -34,6 +34,21 @@ function blackJack()
   $playerCards = [];
   // 相手のカード
   $opponentCards = [];
+
+  $cards=array(2,3,4,5,6,7,8,9,10,
+    "A"=>11,
+    "j"=>10,                      
+    "Q"=>10,
+    "K"=>10
+  );
+
+  if ($playerCards = "J" && "K" || $opponentCards = 4 && 5 ){
+    echo '自分:20点 対戦相手:9点  あなたの勝ちです。';
+  }else if ($playerCards = "A" && 10 || $opponentCards = 10 && "Q"){
+    echo '自分:21点 対戦相手:20点  ブラックジャック！あなたの勝ちです。';
+  }else if ($playerCards = 10 && 10 || $opponentCards = "j" && "Q"){
+    echo '自分:20点 対戦相手:20点  引き分けです。';
+}
 }
 
 ?>
@@ -63,9 +78,17 @@ function blackJack()
     <div class="m-5">
         <h1>ブラックジャック、ゲームスタート！</h1>
         <!-- ここから表示する処理を記載 -->
+        <?php
+         $cards=array(2,3,4,5,6,7,8,9,10,
+         "A"=>11,
+         "j"=>10,                        
+         "Q"=>10,
+         "K"=>10
+       );
 
-
-    </div>
+        echo blackJack();
+        
+        ?>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>

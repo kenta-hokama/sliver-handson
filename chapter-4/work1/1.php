@@ -33,19 +33,26 @@
         */
 
         // 1. Hello world!  をechoしてください。
-
+        echo 'Hello world!';
+        echo '<br>';
 
         // 2. 7 × 5 の答えをechoしてください。
-
+        echo 7 * 5;
+        echo '<br>';
 
         // 3. 10 ÷ 3の余り をechoしてください。
-
+        echo 10 % 3;
+        echo '<br>';
 
         // 4. 3 + 5 を数値としてechoしてください。
+        echo 3 + 5;
+        echo '<br>';
 
 
         // 5. 3 + 5 を文字列としてechoしてください。
-
+        echo '3 + 5';
+        echo '<br>';
+        
 
     ?>
 

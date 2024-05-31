@@ -1,5 +1,56 @@
 <?php
 // ここに処理を記載
+
+  //セッションを開始
+  session_start();
+
+  //エラーメッセージ確認
+  if (isset($_SESSION['error_message'])) {
+    $error_message = $_SESSION['error_message'];
+  }
+  //入力データ確認
+  if (isset($_SESSION['input_data'])) {
+    $data = $_SESSION['input_data'];
+  }
+
+  //セッション破棄
+  session_destroy();
+
+
+  if (!empty($_POST)) {
+
+  //名前チェック
+  if (empty($_POST['fullname'])) {
+    $error_message['fullname'] = '名前を入力して下さい';
+  }
+
+  //電話番号チェック
+  if (empty($_POST['tel'])) {
+    $error_message['tel'] = '電話番号を入力して下さい';
+  } elseif (!is_numeric($_POST['tel'])) {
+    $error_message['tel'] = '数値を入れて下さい';
+  }
+
+  //メールアドレスチェック
+  if (empty($_POST['email'])) {
+    $error_message['email'] = 'メールアドレスを入力して下さい';
+  } elseif (!preg_match('/^[a-z0-9._+^~-]+@[a-z0-9.-]+$/i', $_POST['email'])) {
+    $error_message['email'] = '不正な形式のメールアドレスです。';
+  }
+
+  //お問合せ内容チェック
+  if (empty($_POST['content'])) {
+    $error_message['content'] = 'お問合せ内容を入力して下さい';
+  }
+
+  //エラー内容チェック -- エラーの場合はcontact.phpへリダイレクト
+  if (!empty($error_message)) {
+    $_SESSION['input_data'] = $_POST;
+    $_SESSION['error_message'] = $error_message;
+    header('Location:./contact.php');
+    exit();
+  }
+}
 ?>
 <!-- お問合せ内容確認画面 -->
 <!DOCTYPE html>
