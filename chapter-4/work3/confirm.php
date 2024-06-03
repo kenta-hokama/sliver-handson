@@ -4,10 +4,6 @@
   //セッションを開始
   session_start();
 
-  //エラーメッセージ確認
-  if (isset($_SESSION['error_message'])) {
-    $error_message = $_SESSION['error_message'];
-  }
   //入力データ確認
   if (isset($_SESSION['input_data'])) {
     $data = $_SESSION['input_data'];
@@ -15,7 +11,6 @@
 
   //セッション破棄
   session_destroy();
-
 
   if (!empty($_POST)) {
 
